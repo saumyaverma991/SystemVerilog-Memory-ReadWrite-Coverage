@@ -1,4 +1,3 @@
-# SystemVerilog-Memory-ReadWrite-Coverage
 # SystemVerilog Memory Read/Write Functional Coverage Testbench
 
 This project demonstrates a functional coverage testbench in **SystemVerilog** for a simple **memory read/write design**. The goal is to test all combinations of write and read operations and collect **functional coverage** using SystemVerilog constructs.
