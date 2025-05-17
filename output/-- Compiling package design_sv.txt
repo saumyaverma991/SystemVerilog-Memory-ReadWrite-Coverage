@@ -1,0 +1,181 @@
+-- Compiling package design_sv_unit
+-- Compiling interface memory_interface
+-- Compiling program cover_p
+-- Compiling module memory
+-- Compiling module top
+** Warning: top_c.sv(16): (vlog-PLI-3691) Expected a system task, not a system function '$value$plusargs'.
+** Warning: top_c.sv(17): (vlog-PLI-3691) Expected a system task, not a system function '$value$plusargs'.
+
+Top level modules:
+	cover_p
+	top
+End time: 12:45:07 on May 17,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 2
+QuestaSim-64 vopt 2024.3_1 Compiler 2024.10 Oct 17 2024
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+Start time: 12:45:08 on May 17,2025
+vopt -access=rw+/. -timescale 1ns/1ns -mfcu "+acc=npr" -findtoplevels qrun.out/work+1+ -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+
+Top level modules:
+	cover_p
+	top
+
+Analyzing design...
+-- Loading program cover_p
+-- Loading module top
+-- Loading interface memory_interface
+-- Loading module memory
+Optimizing 6 design-units (inlining 0/4 module instances):
+-- Optimizing package design_sv_unit(fast)
+-- Optimizing module top(fast)
+** Warning: top_c.sv(16): (vopt-PLI-3691) Expected a system task, not a system function '$value$plusargs'.
+** Warning: top_c.sv(17): (vopt-PLI-3691) Expected a system task, not a system function '$value$plusargs'.
+-- Optimizing module memory(fast)
+-- Optimizing interface memory_interface(fast__2)
+-- Optimizing program cover_p(fast)
+-- Optimizing interface memory_interface(fast)
+Optimized design name is qrun_opt
+End time: 12:45:08 on May 17,2025, Elapsed time: 0:00:00
+Errors: 0, Warnings: 3
+# vsim -batch "+testcase=TEST_1_WR_1_RD" -lib qrun.out/work -do "run.do" -statslog qrun.out/stats_log qrun_opt -appendlog -l qrun.log 
+# Start time: 12:45:08 on May 17,2025
+# //  Questa Sim-64
+# //  Version 2024.3_1 linux_x86_64 Oct 17 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.design_sv_unit(fast)
+# Loading work.cover_p(fast)
+# Loading work.top(fast)
+# Loading work.memory_interface(fast__2)
+# Loading work.memory(fast)
+# 
+# do run.do
+# coverage
+# *****TOP*****
+# environment
+# *****agent*****
+# Generator
+# GENERATOR WRITE OPERATION
+# addr=f8
+# data=cbd5
+# wr_rd=WRITE
+# GENERATOR READ OPERATION
+# addr=f8
+# data=0000
+# wr_rd= READ
+# BFM
+# driving transaction in bfm from gen
+# *****monitor*****
+# coverage
+# getting transactions
+# addr=f8
+# data=cbd5
+# wr_rd=WRITE
+# driving transaction in bfm from gen
+# MON_WR
+# addr=f8
+# data=cbd5
+# wr_rd=WRITE
+# Coverage = 16.67%
+# COV_WR
+# addr=f8
+# data=cbd5
+# wr_rd=WRITE
+# getting transactions
+# addr=f8
+# data=0000
+# wr_rd= READ
+# ** Note: $finish    : top_c.sv(41)
+#    Time: 1 us  Iteration: 0  Instance: /top
+# End time: 12:45:08 on May 17,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+End time: 12:45:08 on May 17,2025, Elapsed time: 0:00:01
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vlog: Errors:   0, Warnings:   2
+    vopt: Errors:   0, Warnings:   3
+    vsim: Errors:   0, Warnings:   0
+  Totals: Errors:   0, Warnings:   5
+Creating result.zip...
+  adding: qrun.log (deflated 66%)
+  adding: qrun.out/ (stored 0%)
+  adding: qrun.out/history (deflated 17%)
+  adding: qrun.out/work/ (stored 0%)
+  adding: qrun.out/work/_lib.qdb (deflated 98%)
+  adding: qrun.out/work/_temp/ (stored 0%)
+  adding: qrun.out/work/_lib1_0.qtl (deflated 25%)
+  adding: qrun.out/work/_lib5_0.qdb (deflated 99%)
+  adding: qrun.out/work/_vmake (stored 0%)
+  adding: qrun.out/work/qrun_opt/ (stored 0%)
+  adding: qrun.out/work/qrun_opt/_lib.qdb (deflated 95%)
+  adding: qrun.out/work/qrun_opt/_lib6_0.qpg (deflated 89%)
+  adding: qrun.out/work/qrun_opt/_viscom/ (stored 0%)
+  adding: qrun.out/work/qrun_opt/_viscom/.env_list_file (deflated 64%)
+  adding: qrun.out/work/qrun_opt/_viscom/.viscom_elab_file (deflated 29%)
+  adding: qrun.out/work/qrun_opt/_viscom/_info (deflated 45%)
+  adding: qrun.out/work/qrun_opt/_lib3_0.qpg (stored 0%)
+  adding: qrun.out/work/qrun_opt/_lib3_0.qtl (deflated 36%)
+  adding: qrun.out/work/qrun_opt/_lib2_0.qpg (stored 0%)
+  adding: qrun.out/work/qrun_opt/_lib2_0.qtl (deflated 13%)
+  adding: qrun.out/work/qrun_opt/_lib1_0.qtl (deflated 24%)
+  adding: qrun.out/work/qrun_opt/_lib5_0.qdb (deflated 98%)
+  adding: qrun.out/work/qrun_opt/href.log (deflated 75%)
+  adding: qrun.out/work/qrun_opt/_lib6_0.qdb (deflated 95%)
+  adding: qrun.out/work/qrun_opt/_lib2_0.qdb (deflated 99%)
+  adding: qrun.out/work/qrun_opt/_lib3_0.qdb (deflated 99%)
+  adding: qrun.out/work/qrun_opt/_lib1_0.qdb (deflated 98%)
+  adding: qrun.out/work/qrun_opt/_lib1_0.qpg (stored 0%)
+  adding: qrun.out/work/qrun_opt/.viscom_cmd_file (deflated 32%)
+  adding: qrun.out/work/qrun_opt/_lib5_0.qtl (deflated 0%)
+  adding: qrun.out/work/qrun_opt/_data/ (stored 0%)
+  adding: qrun.out/work/qrun_opt/_data/exemptJov9FJ (deflated 100%)
+  adding: qrun.out/work/qrun_opt/_data/exemptSseD20 (deflated 53%)
+  adding: qrun.out/work/qrun_opt/_data/exempt5d3KmR (deflated 43%)
+  adding: qrun.out/work/qrun_opt/_lib5_0.qpg (deflated 1%)
+  adding: qrun.out/work/qrun_opt/vst_href.db (deflated 50%)
+  adding: qrun.out/work/qrun_opt/_lib6_0.qtl (deflated 76%)
+  adding: qrun.out/work/_lib1_0.qdb (deflated 98%)
+  adding: qrun.out/work/_info (deflated 54%)
+  adding: qrun.out/work/_lib1_0.qpg (stored 0%)
+  adding: qrun.out/work/_lib5_0.qtl (deflated 57%)
+  adding: qrun.out/work/_lib5_0.qpg (stored 0%)
+  adding: qrun.out/work/_tempmsg/ (stored 0%)
+  adding: qrun.out/top_dus (stored 0%)
+  adding: qrun.out/sessions/ (stored 0%)
+  adding: qrun.out/sessions/work$3153097979-84595611 (deflated 59%)
+  adding: qrun.out/version (stored 0%)
+  adding: qrun.out/stats_log (deflated 55%)
+  adding: qrun.out/history.cnt (stored 0%)
+  adding: qrun.out/snapshot (stored 0%)
+  adding: modelsim.ini (deflated 15%)
+  adding: interface_c.sv (deflated 39%)
+  adding: bfm_c.sv (deflated 59%)
+  adding: memory.sv (deflated 60%)
+  adding: transaction_c.sv (deflated 38%)
+  adding: work/ (stored 0%)
+  adding: generator_c.sv (deflated 47%)
+  adding: monitor_c.sv (deflated 52%)
+  adding: testbench.sv (deflated 64%)
+  adding: design.sv (stored 0%)
+  adding: environment_c.sv (deflated 31%)
+  adding: agent_c.sv (deflated 44%)
+  adding: common_c.sv (deflated 35%)
+  adding: ACCELLERA_OVL_VHDL_LIB/ (stored 0%)
+  adding: run.sh (deflated 40%)
+  adding: top_c.sv (deflated 58%)
+  adding: run.do (stored 0%)
+  adding: coverage_c.sv (deflated 46%)
+  adding: .bash_profile (deflated 20%)
+  adding: .bash_logout (stored 0%)
+  adding: .bashrc (deflated 40%)
